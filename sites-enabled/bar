@@ -1,0 +1,13 @@
+server {
+        listen 8082;
+
+        root /var/www/html/bar;
+        index bar.html;
+
+        server_name bar;
+
+        location / {
+                try_files $uri $uri/ =404;
+        }
+
+}
